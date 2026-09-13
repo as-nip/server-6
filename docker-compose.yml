@@ -1,0 +1,29 @@
+services:
+   server67:
+     image: mutanic/server6:latest
+     container_name: server67
+     hostname: server67
+     ports:
+       - "5380:5380/tcp"
+       - "53443:53443/tcp"
+       - "53:53/udp"
+       - "53:53/tcp"
+       - "853:853/tcp"
+       - "853:853/udp"
+       - "443:443/udp"
+       - "443:443/tcp"
+       - "80:80/tcp"
+       - "8053:8053/tcp"
+       - "67:67/udp"
+     env_file:
+       - .env
+     restart: unless-stopped
+     volumes:
+       - config:/etc/dns
+       - logs:/var/log/technitium/dns 
+     sysctls:
+       - net.ipv4.ip_local_port_range=1024 65535
+
+volumes:
+   config:
+   logs:
