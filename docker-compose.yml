@@ -1,6 +1,6 @@
 services:
    server67:
-     image: mutanic/server6:latest
+     image: ghcr.io/as-nip/server-6:latest
      container_name: server67
      hostname: server67
      ports:

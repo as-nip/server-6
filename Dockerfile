@@ -42,5 +42,5 @@ EXPOSE \
     67/udp
 
 LABEL org.opencontainers.image.title="Server-67 DNS"
-LABEL org.opencontainers.image.source=https://github.com/mutanic/server-6
+LABEL org.opencontainers.image.source="https://github.com/as-nip/server-6"
 
